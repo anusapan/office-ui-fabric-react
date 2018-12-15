@@ -1,7 +1,7 @@
 import { ITheme } from 'office-ui-fabric-react';
-import { borderRadius } from './styleConstants';
+import { borderRadius, outlineOffset } from './styleConstants';
 import { getFocusStyle } from 'office-ui-fabric-react/lib/Styling';
-import { NeutralColors, CommunicationColors } from '../IbizaColors';
+import { NeutralColors, DarkColors } from '../IbizaColors';
 import { IButtonStyles } from 'office-ui-fabric-react/lib/Button';
 
 // TODO: "any" is used here to get around "is using xxx but cannot be named" TS error. Should be able to remove
@@ -10,23 +10,35 @@ import { IButtonStyles } from 'office-ui-fabric-react/lib/Button';
 export const DefaultButtonStyles = (theme: ITheme): Partial<IButtonStyles> => {
   return {
     root: {
-      borderRadius: borderRadius,
-      backgroundColor: NeutralColors.white,
-      border: `1px solid ${NeutralColors.gray110}`,
+      backgroundColor: NeutralColors.black,
+      border: `1px solid ${DarkColors.themePrimary}`,
+      color: DarkColors.themePrimary,
+      fontSize: '12px',
       ...getFocusStyle(theme, 1)
     },
     rootHovered: {
       selectors: {
         '.ms-Button--primary': {
-          backgroundColor: CommunicationColors.shade10
+          backgroundColor: theme.palette.themeSecondary
         }
-      }
+      },
+      color: DarkColors.themeShade10,
+      borderColor: DarkColors.themeShade10,
+      backgroundColor: NeutralColors.gray105
     },
     rootPressed: {
-      backgroundColor: NeutralColors.gray30
+      color: DarkColors.themeShade20,
+      borderColor: DarkColors.themeShade20,
+      backgroundColor: NeutralColors.gray105
     },
     rootChecked: {
-      backgroundColor: NeutralColors.gray30
+      color: DarkColors.themeShade20,
+      borderColor: DarkColors.themeShade20,
+      backgroundColor: NeutralColors.gray105
+    },
+    rootFocused: {
+      outlineOffset: outlineOffset,
+      outline: `${DarkColors.themeShade25} dashed 1px`
     },
     rootDisabled: {
       backgroundColor: NeutralColors.gray20,
@@ -48,10 +60,10 @@ export const DefaultButtonStyles = (theme: ITheme): Partial<IButtonStyles> => {
         },
         '.ms-Button--primary': {
           border: 'none',
-          backgroundColor: CommunicationColors.primary
+          backgroundColor: theme.palette.themePrimary
         },
         '.ms-Button--primary + .ms-Button': {
-          backgroundColor: CommunicationColors.primary,
+          backgroundColor: theme.palette.themePrimary,
           border: 'none'
         },
         '.ms-Button.is-disabled': {

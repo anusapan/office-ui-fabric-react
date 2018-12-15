@@ -1,21 +1,30 @@
-import { borderRadius } from './styleConstants';
-import { CommunicationColors, NeutralColors } from '../IbizaColors';
+import { DarkColors, NeutralColors } from '../IbizaColors';
 import { IButtonStyles } from 'office-ui-fabric-react/lib/Button';
 
 export const PrimaryButtonStyles: Partial<IButtonStyles> = {
   root: {
-    borderRadius: borderRadius,
-    border: 'none',
-    backgroundColor: CommunicationColors.primary,
-    color: NeutralColors.white
+    border: '1px solid',
+    borderColor: DarkColors.themePrimary,
+    backgroundColor: DarkColors.themePrimary,
+    color: NeutralColors.black,
+    padding: '0 20px'
   },
   rootHovered: {
-    backgroundColor: CommunicationColors.shade10
+    backgroundColor: DarkColors.themeShade10,
+    borderColor: DarkColors.themeShade10,
+    color: NeutralColors.black
   },
   rootPressed: {
-    backgroundColor: CommunicationColors.shade20
+    backgroundColor: DarkColors.themeShade20,
+    borderColor: DarkColors.themeShade20,
+    color: NeutralColors.black
   },
   rootChecked: {
-    backgroundColor: CommunicationColors.shade20
+    backgroundColor: DarkColors.themeShade20,
+    borderColor: DarkColors.themeShade20,
+    color: NeutralColors.black
+  },
+  rootFocused: {
+    color: NeutralColors.black
   }
 };

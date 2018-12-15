@@ -19,8 +19,9 @@ export namespace DarkColors {
   export const themeShade50 = '#03060a';
   export const themeShade40 = '#0b1829';
   export const themeShade30 = '#152c4d';
-  export const themeShade20 = '#2b5999';
-  export const themeShade10 = '#3f82e0';
+  export const themeShade25 = '#00bcf2';
+  export const themeShade20 = '#257ffe';
+  export const themeShade10 = '#6ca9fe';
   export const themePrimary = '#4894fe';
   export const themeTint10 = '#5a9fff';
   export const themeTint20 = '#73aeff';
@@ -28,7 +29,7 @@ export namespace DarkColors {
 }
 
 export namespace NeutralColors {
-  export const black = '#000000';
+  export const black = '#111';
   export const gray10 = '#f8f8f8';
   export const gray20 = '#f4f4f4';
   export const gray30 = '#eaeaea';
@@ -39,6 +40,7 @@ export namespace NeutralColors {
   export const gray80 = '#373737';
   export const gray90 = '#2f2f2f';
   export const gray100 = '#252525';
+  export const gray105 = '#1c1c1c';
   export const gray110 = '#151515';
   export const gray120 = '#0b0b0b';
   export const white = '#ffffff';
