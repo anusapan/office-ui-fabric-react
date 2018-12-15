@@ -25,6 +25,7 @@ export const PrimaryButtonStyles: Partial<IButtonStyles> = {
     color: NeutralColors.black
   },
   rootFocused: {
-    color: NeutralColors.black
+    color: NeutralColors.black,
+    outline: `${NeutralColors.black} dotted 1px`
   }
 };

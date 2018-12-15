@@ -1,6 +1,7 @@
 import { borderRadius, outlineOffset } from './styleConstants';
 import { getFocusStyle } from 'office-ui-fabric-react/lib/Styling';
 import { NeutralColors, DarkColors } from '../IbizaColors';
+import { FontSizes } from '../IbizaType';
 import { IButtonStyles } from 'office-ui-fabric-react/lib/Button';
 import { IExtendedTheme } from '../IExtendedTheme';
 
@@ -10,11 +11,11 @@ import { IExtendedTheme } from '../IExtendedTheme';
 export const DefaultButtonStyles = (extendedTheme: IExtendedTheme): Partial<IButtonStyles> => {
   return {
     root: {
-      borderRadius: borderRadius,
       backgroundColor: NeutralColors.black,
       border: `1px solid ${DarkColors.themePrimary}`,
       color: DarkColors.themePrimary,
-      fontSize: '12px',
+      fontSize: FontSizes.size12,
+      height: FontSizes.size24,
       ...getFocusStyle(extendedTheme.theme, 1)
     },
     rootHovered: {
@@ -39,7 +40,7 @@ export const DefaultButtonStyles = (extendedTheme: IExtendedTheme): Partial<IBut
     },
     rootFocused: {
       outlineOffset: outlineOffset,
-      outline: `${DarkColors.themeShade25} dashed 1px`
+      outline: `${DarkColors.themeShade25} dotted 1px`
     },
     rootDisabled: {
       backgroundColor: NeutralColors.gray20,
