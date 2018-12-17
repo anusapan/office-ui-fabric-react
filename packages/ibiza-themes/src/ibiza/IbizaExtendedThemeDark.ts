@@ -5,7 +5,8 @@ import { IExtendedTheme } from './IExtendedTheme';
 export class IbizaExtendedThemeDark implements IExtendedTheme {
   public readonly semanticColors = {
     errorBorder: DarkColors.errorBorder,
-    errorText: DarkColors.errorText
+    errorText: DarkColors.errorText,
+    buttonOutlineFocused: DarkColors.themeShade25
   };
 
   public readonly theme: ITheme;
@@ -34,8 +35,18 @@ export class IbizaExtendedThemeDark implements IExtendedTheme {
         neutralLighter: NeutralColors.gray110,
         neutralLighterAlt: NeutralColors.gray120,
 
-        black: NeutralColors.gray10,
-        white: NeutralColors.black
+        black: NeutralColors.gray05,
+        white: NeutralColors.white
+      },
+      semanticColors: {
+        buttonBackground: NeutralColors.gray05,
+        buttonBackgroundDisabled: NeutralColors.gray20,
+        buttonBackgroundChecked: NeutralColors.gray100,
+        buttonBackgroundHovered: NeutralColors.gray100,
+        buttonBackgroundPressed: NeutralColors.gray100,
+        buttonBackgroundCheckedHovered: NeutralColors.gray100,
+
+        buttonBorderDisabled: NeutralColors.gray20
       }
     });
   }

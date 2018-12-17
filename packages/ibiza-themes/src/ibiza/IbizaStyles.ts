@@ -118,7 +118,7 @@ export const IbizaStyle = (extendedTheme: IExtendedTheme): any => {
       styles: PlainCardStyles
     },
     PrimaryButton: {
-      styles: PrimaryButtonStyles
+      styles: PrimaryButtonStyles(extendedTheme)
     },
     Rating: {
       styles: RatingStyles

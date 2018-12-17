@@ -5,7 +5,8 @@ import { IExtendedTheme } from './IExtendedTheme';
 export class IbizaExtendedThemeLight implements IExtendedTheme {
   public readonly semanticColors = {
     errorBorder: LightColors.errorBorder,
-    errorText: LightColors.errorText
+    errorText: LightColors.errorText,
+    buttonOutlineFocused: LightColors.themeShade20
   };
 
   public readonly theme: ITheme;

@@ -1,6 +1,5 @@
 import { borderRadius, outlineOffset } from './styleConstants';
 import { getFocusStyle } from 'office-ui-fabric-react/lib/Styling';
-import { NeutralColors, DarkColors } from '../IbizaColors';
 import { FontSizes } from '../IbizaType';
 import { IButtonStyles } from 'office-ui-fabric-react/lib/Button';
 import { IExtendedTheme } from '../IExtendedTheme';
@@ -11,46 +10,47 @@ import { IExtendedTheme } from '../IExtendedTheme';
 export const DefaultButtonStyles = (extendedTheme: IExtendedTheme): Partial<IButtonStyles> => {
   return {
     root: {
-      backgroundColor: NeutralColors.black,
-      border: `1px solid ${DarkColors.themePrimary}`,
-      color: DarkColors.themePrimary,
+      backgroundColor: extendedTheme.theme.semanticColors.buttonBackground,
+      border: `1px solid ${extendedTheme.theme.palette.themePrimary}`,
+      color: extendedTheme.theme.palette.themePrimary,
       fontSize: FontSizes.size12,
       height: FontSizes.size24,
       ...getFocusStyle(extendedTheme.theme, 1)
     },
     rootHovered: {
-      selectors: {
-        '.ms-Button--primary': {
-          backgroundColor: extendedTheme.theme.palette.themeSecondary
-        }
-      },
-      color: DarkColors.themeShade10,
-      borderColor: DarkColors.themeShade10,
-      backgroundColor: NeutralColors.gray105
+      color: extendedTheme.theme.palette.themeSecondary,
+      borderColor: extendedTheme.theme.palette.themeSecondary,
+      backgroundColor: extendedTheme.theme.semanticColors.buttonBackgroundHovered
     },
     rootPressed: {
-      color: DarkColors.themeShade20,
-      borderColor: DarkColors.themeShade20,
-      backgroundColor: NeutralColors.gray105
+      color: extendedTheme.theme.palette.themeTertiary,
+      borderColor: extendedTheme.theme.palette.themeTertiary,
+      backgroundColor: extendedTheme.theme.semanticColors.buttonBackgroundPressed
     },
     rootChecked: {
-      color: DarkColors.themeShade20,
-      borderColor: DarkColors.themeShade20,
-      backgroundColor: NeutralColors.gray105
+      color: extendedTheme.theme.palette.themeTertiary,
+      borderColor: extendedTheme.theme.palette.themeTertiary,
+      backgroundColor: extendedTheme.theme.semanticColors.buttonBackgroundChecked
     },
     rootFocused: {
+      selectors: {
+        '.ms-Fabric--isFocusVisible &:focus::after': {
+          borderColor: 'transparent',
+          outline: 'none'
+        }
+      },
       outlineOffset: outlineOffset,
-      outline: `${DarkColors.themeShade25} dotted 1px`
+      outline: `${extendedTheme.semanticColors.buttonOutlineFocused} dotted 1px`
     },
     rootDisabled: {
-      backgroundColor: NeutralColors.gray20,
-      borderColor: NeutralColors.gray20
+      backgroundColor: extendedTheme.theme.semanticColors.buttonBackgroundDisabled,
+      borderColor: extendedTheme.theme.semanticColors.buttonBorderDisabled
     },
     splitButtonMenuButton: {
       background: 'transparent',
       borderTopRightRadius: borderRadius,
       borderBottomRightRadius: borderRadius,
-      border: `1px solid ${NeutralColors.gray110}`,
+      border: `1px solid ${extendedTheme.theme.palette.neutralLighter}`,
       borderLeft: 'none'
     },
     splitButtonContainer: {
@@ -69,10 +69,10 @@ export const DefaultButtonStyles = (extendedTheme: IExtendedTheme): Partial<IBut
           border: 'none'
         },
         '.ms-Button.is-disabled': {
-          backgroundColor: NeutralColors.gray20
+          backgroundColor: extendedTheme.theme.semanticColors.buttonBackgroundDisabled
         },
         '.ms-Button.is-disabled + .ms-Button': {
-          backgroundColor: NeutralColors.gray20,
+          backgroundColor: extendedTheme.theme.semanticColors.buttonBackgroundDisabled,
           border: 'none'
         }
       }

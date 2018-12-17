@@ -29,7 +29,8 @@ export namespace DarkColors {
 }
 
 export namespace NeutralColors {
-  export const black = '#111';
+  export const black = '#000000';
+  export const gray05 = '#111';
   export const gray10 = '#f8f8f8';
   export const gray20 = '#f4f4f4';
   export const gray30 = '#eaeaea';
