@@ -43,8 +43,15 @@ export const DefaultButtonStyles = (extendedTheme: IExtendedTheme): Partial<IBut
       outline: `${extendedTheme.semanticColors.buttonOutlineFocused} dotted 1px`
     },
     rootDisabled: {
+      selectors: {
+        '.ms-Fabric--isFocusVisible &:focus::after': {
+          borderColor: 'transparent',
+          outline: 'none'
+        }
+      },
       backgroundColor: extendedTheme.theme.semanticColors.buttonBackgroundDisabled,
-      borderColor: extendedTheme.theme.semanticColors.buttonBorderDisabled
+      borderColor: extendedTheme.theme.semanticColors.buttonBorderDisabled,
+      color: extendedTheme.theme.semanticColors.buttonTextDisabled
     },
     splitButtonMenuButton: {
       background: 'transparent',

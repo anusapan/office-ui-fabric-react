@@ -40,13 +40,14 @@ export class IbizaExtendedThemeDark implements IExtendedTheme {
       },
       semanticColors: {
         buttonBackground: NeutralColors.gray05,
-        buttonBackgroundDisabled: NeutralColors.gray20,
+        buttonBackgroundDisabled: NeutralColors.gray105,
         buttonBackgroundChecked: NeutralColors.gray100,
         buttonBackgroundHovered: NeutralColors.gray100,
         buttonBackgroundPressed: NeutralColors.gray100,
         buttonBackgroundCheckedHovered: NeutralColors.gray100,
+        buttonTextDisabled: NeutralColors.gray65,
 
-        buttonBorderDisabled: NeutralColors.gray20
+        buttonBorderDisabled: NeutralColors.gray105
       }
     });
   }

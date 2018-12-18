@@ -37,6 +37,7 @@ export namespace NeutralColors {
   export const gray40 = '#dadada';
   export const gray50 = '#d0d0d0';
   export const gray60 = '#c8c8c8';
+  export const gray65 = '#696969';
   export const gray70 = '#595959';
   export const gray80 = '#373737';
   export const gray90 = '#2f2f2f';
